@@ -1,9 +1,4 @@
 class ContentController < ApplicationController
-  Mime::Type.register 'image/png', :png
-  Mime::Type.register 'image/jpeg', :jpg
-  Mime::Type.register 'audio/mpeg', :mp3
-  Mime::Type.register 'application/x-shockwave-flash', :swf
-  Mime::Type.register 'image/gif', :gif
 
   MAX_SIZE = 15_728_640 # 15 megabytes
   ALLOWED_MIME_TYPES = %w{application/x-shockwave-flash audio/mpeg image/png image/jpeg image/gif}
@@ -17,6 +12,8 @@ class ContentController < ApplicationController
         render :audio
       when "application/x-shockwave-flash"
         render :flash
+      else
+        render text: "wut da fuk"
       end
     else
       render text: "no such picture"
@@ -26,11 +23,11 @@ class ContentController < ApplicationController
   def new
     if file = params[:file]
       raise "file is too big - max size: #{MAX_SIZE} bytes" if file.size >= MAX_SIZE
-      raise "invalid mime type #{file.content_type}" unless ALLOWED_MIME_TYPES.include? file.content_type
+      raise "invalid mime type" unless ALLOWED_MIME_TYPES.include? File.mime_type?(file.original_filename)
       content = Content.new data: file.read, remote_address: request.remote_ip
       content.sid = Digest::MD5.hexdigest content.data
       content.name = file.original_filename
-      content.content_type = file.content_type
+      content.content_type = File.mime_type? content.name
       content.save
       render text: "http://io.maero.dk/#{content.sid}\n"
     else
