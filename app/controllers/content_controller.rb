@@ -1,11 +1,17 @@
 class ContentController < ApplicationController
+  Mime::Type.register 'image/png', :png
+  Mime::Type.register 'image/jpeg', :jpg
+  Mime::Type.register 'audio/mpeg', :mp3
+  Mime::Type.register 'application/x-shockwave-flash', :swf
+  Mime::Type.register 'image/gif', :gif
+
   MAX_SIZE = 15_728_640 # 15 megabytes
   ALLOWED_MIME_TYPES = %w{application/x-shockwave-flash audio/mpeg image/png image/jpeg image/gif}
 
   def view
     if @content = Content.find_by_sid(params[:hash])
       case @content.content_type
-      when "image/png", "image/jpeg"
+      when "image/png", "image/jpeg", "image/gif"
         render :picture
       when "audio/mpeg"
         render :audio
