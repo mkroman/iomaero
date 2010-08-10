@@ -1,0 +1,13 @@
+<% content_for :head do %>
+  <%= javascript_include_tag 'audio-player' %>
+  <%= javascript_tag "AudioPlayer.setup('/media/player.swf', {
+      width: 300,
+      initialvolume: 100,
+      autostart: 'yes',
+      buffer: 1
+    });" %>
+<% end %>
+
+<div id="audioplayer">
+  <%= javascript_tag "AudioPlayer.embed(\"audioplayer\", {soundFile: \"/#{@content.sid}.mp3\"});" %>
+</div>

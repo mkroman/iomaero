@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  hash: MyString
+  data: 
+  content_type: MyString
+  remote_address: MyString
+
+two:
+  hash: MyString
+  data: 
+  content_type: MyString
+  remote_address: MyString
