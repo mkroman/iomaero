@@ -1,6 +1,4 @@
 *.swp
-config/database.yml
-db/schema.rb
 *~
 *.cache
 *.log
