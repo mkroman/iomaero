@@ -5,6 +5,5 @@
 *.pid
 tmp/**/*
 .DS\_Store
-db/*.sqlite3
 *.tmproj
 Capfile
