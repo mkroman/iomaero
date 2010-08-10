@@ -20,7 +20,7 @@ class ContentController < ApplicationController
   def new
     if file = params[:file]
       raise "file is too big - max size: #{MAX_SIZE} bytes" if file.size >= MAX_SIZE
-      raise "invalid mime type" unless ALLOWED_MIME_TYPES.include? file.content_type
+      raise "invalid mime type #{file.content_type}" unless ALLOWED_MIME_TYPES.include? file.content_type
       content = Content.new data: file.read, remote_address: request.remote_ip
       content.sid = Digest::MD5.hexdigest content.data
       content.name = file.original_filename
