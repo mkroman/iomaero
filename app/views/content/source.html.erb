@@ -1,0 +1,3 @@
+<%h content_for :title, "Source: #{@content.name}" %>
+<%h content_for :head, stylesheet_link_tag('source') %>
+<div class="source"><%= @source.html %></div>

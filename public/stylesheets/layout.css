@@ -28,7 +28,7 @@ div.content {
   text-align: center;
 }
 
-div.content object, img {
+div.content object, div.content img, div.content .source {
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;

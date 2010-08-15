@@ -6,4 +6,5 @@
 tmp/**/*
 .DS\_Store
 *.tmproj
+db/*.sqlite3
 Capfile

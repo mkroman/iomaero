@@ -1,4 +1,4 @@
-<%h content_for :title, @content.sid %>
+<%h content_for :title, "Picture: #{@content.sid}" %>
 <div class="box">
   <a href="/<%= @content.file %>" target="_self">
     <img src="/<%= @content.file %>" target="_self" />
