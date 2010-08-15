@@ -380,4 +380,8 @@ wm: video/x-ms-wm
 wmx: video/x-ms-wmx
 wmz: application/x-ms-wmz
 wmd: application/x-ms-wmd
-
+py: application/x-python
+php: application/x-php
+php4: application/x-php
+php5: application/x-php
+php3: application/x-php

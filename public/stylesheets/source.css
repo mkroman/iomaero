@@ -15,7 +15,7 @@ div.content .source {
 .source .ch .k { color:#04D }
 .source .ch .dl { color:#039 }
  
-.source .cl { color:#B06; font-weight:bold }
+.source .cl { color:#e3d796; font-style: italic; }
 .source .cm { color:#A08; font-weight:bold }
 .source .co { color:#e3d796; }
 .source .cr { color:#0A0 }
@@ -32,7 +32,7 @@ div.content .source {
 .source .er { color:#F00; background-color:#FAA }
 .source .ex { color:#C00; font-weight:bold }
 .source .fl { color:#60E; font-weight:bold }
-.source .fu { color:#06B; font-weight:bold }
+.source .fu { color:#a999ac; }
 .source .gv { color:#8a9597; }
 .source .hx { color:#058; font-weight:bold }
 .source .i  { color:#d08356; }
@@ -46,7 +46,7 @@ div.content .source {
  
 .source .im { color:#f00; }
 .source .in { color:#B2B; font-weight:bold }
-.source .iv { color:#33B }
+.source .iv { color:#8a9597; }
 .source .la { color:#970; font-weight:bold }
 .source .lv { color:#963 }
 .source .oc { color:#40E; font-weight:bold }
@@ -74,7 +74,7 @@ div.content .source {
 .source .s .s { background-color:#ffe0e0 }
 .source .s .s  .s { background-color:#ffd0d0 }
 .source .s .k { color: #a2a96f; background-color: #1a1a1a; }
-.source .s .ch { color: #b0b; }
+.source .s .ch { color: #c2c98f; background-color: #1a1a1a; }
 .source .s .dl { color: #c2c98f; background-color: #1a1a1a; }
  
 .source .sh { background-color:#f0fff0; color:#2B2 }
@@ -107,6 +107,7 @@ div.content .source {
 }
 
 div .source {
+  overflow: auto;
   font-family: 'Droid Sans Mono', monospace;
   font-size: 9pt;
   text-align: left;

@@ -1,7 +1,7 @@
 class ContentController < ApplicationController
 
   MAX_SIZE = 15_728_640 # 15 megabytes
-  ALLOWED_MIME_TYPES = %w{application/x-shockwave-flash audio/mpeg image/png image/jpeg image/gif application/x-ruby}
+  ALLOWED_MIME_TYPES = %w{application/x-shockwave-flash audio/mpeg image/png image/jpeg image/gif application/x-ruby application/x-python}
 
   def view
     if @content = Content.find_by_sid(params[:hash])
@@ -14,6 +14,9 @@ class ContentController < ApplicationController
         render :flash
       when "application/x-ruby"
         @source = CodeRay.scan @content.data, :ruby
+        render :source
+      when "application/x-python"
+        @source = CodeRay.scan @content.data, :python
         render :source
       end
     else
