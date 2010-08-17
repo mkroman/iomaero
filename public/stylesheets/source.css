@@ -108,11 +108,11 @@ div.content .source {
 
 div .source {
   overflow: auto;
-  font-family: 'Droid Sans Mono', monospace;
-  font-size: 9pt;
+  font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', monospace;
+  font-size: 10pt;
   text-align: left;
   white-space: pre;
   color: #fffedc;
-  letter-spacing: -0.8pt;
+  /* letter-spacing: -0.8pt; */
   background-color: #1a1a1a;
 }
