@@ -77,9 +77,9 @@ div.content .source {
 .source .s .ch { color: #c2c98f; background-color: #1a1a1a; }
 .source .s .dl { color: #c2c98f; background-color: #1a1a1a; }
  
-.source .sh { background-color:#f0fff0; color:#2B2 }
+.source .sh { background-color:#1a1a1a; color:#a2a96f; }
 .source .sh .k { }
-.source .sh .dl { color:#161 }
+.source .sh .dl { color:#c2c98f; }
  
 .source .sy { color:#d08356; }
 .source .sy .k { color:#A60 }
